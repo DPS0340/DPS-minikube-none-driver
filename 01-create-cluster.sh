@@ -8,10 +8,10 @@ DIR=$(dirname "$LOCATION")
 
 # Arch (pacman) only
 # FIXME: Ports with multiple distros
-sudo pacman -Syu conntrack-tools crictl
+sudo pacman -Syu conntrack-tools crictl --noconfirm
 
 # Assuming docker container runtime
-yay -S cri-dockerd-git
+yay -S cri-dockerd-git --noconfirm
 
 sudo sysctl fs.protected_regular=0
 
