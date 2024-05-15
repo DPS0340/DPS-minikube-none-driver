@@ -8,4 +8,6 @@ DIR=$(dirname "$LOCATION")
 
 mkdir -p ~/.kube
 
-minikube update-context
+sudo cp /root/.kube/config ~/.kube/config
+sudo chown $USER ~/.kube/config
+
